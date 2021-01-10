@@ -46,6 +46,3 @@ import csv
 # plt.boxplot(day,showfliers=True)
 #
 # plt.show()
-
-
-with open() as f:
