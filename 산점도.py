@@ -31,5 +31,5 @@ with open('gender.csv') as f:
 plt.scatter(x,y, s=size, c=range(101), alpha=0.5, cmap='autumn')
 plt.colorbar()
 plt.plot(range(max(x)), range(max(x)))
-print(max(x))
+print(max(y))
 plt.show()
