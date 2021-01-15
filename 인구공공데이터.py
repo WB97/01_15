@@ -37,13 +37,15 @@ with open('gender.csv') as f:
     f = []
 
     for row in data:
-        if '평거동' in row[0]:
+        if '(5011000000)' in row[0]:
             for i in range(101):
-                m.append(int(row[i+3]))
-                f.append(-int(row[i+106]))
-
-plt.barh(range(len(m)),m)
-plt.barh(range(len(f)),f)
+                # m.append(int(row[i+3]))
+                # f.append(-int(row[-(i + 1)]))
+                m.append(int(row[i + 3].replace(',', '')))
+                f.append(int(row[-(i + 1)].replace(',', '')))
+    f.reverse()
+plt.barh(range(101),m)
+plt.barh(range(101),f)
 plt.show()
 
 # a = input('찾을 주소 입력 : ')
